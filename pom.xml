@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cn.et</groupId>
+  <artifactId>freemarker_front</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <dependencies>
+    		<dependency>
+  			<groupId>mysql</groupId>
+  			<artifactId>mysql-connector-java</artifactId>
+  			<version>5.1.6</version>
+  		</dependency>
+  		<dependency>
+		  <groupId>org.freemarker</groupId>
+		  <artifactId>freemarker</artifactId>
+		  <version>2.3.23</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache.commons</groupId>
+		  <artifactId>commons-io</artifactId>
+		  <version>1.3.2</version> 
+		</dependency>
+  </dependencies>
+  <build>
+	<plugins>
+	<!-- 导入maven中对应的Tomcat 可以通过运行war项目查看该maven的版本 -->
+		<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				  <artifactId>tomcat-maven-plugin</artifactId>
+				  <version>1.1</version>
+		<!-- 修改字符集和端口 -->
+				  <configuration>
+				  		<port>80</port>
+				  		<uriEncoding>UTF-8</uriEncoding>
+				  </configuration>
+		</plugin>
+	</plugins>
+</build>
+  
+</project>
