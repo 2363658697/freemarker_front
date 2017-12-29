@@ -20,6 +20,7 @@ public class MyTask extends TimerTask{
     public void run() {
         try {
             List<Map<String, String>> maps = myNews.queryNews();
+            
             Configuration cfg = new Configuration(Configuration.VERSION_2_3_0);
             //≈‰÷√ftl≤È’“ƒø¬º
             cfg.setDirectoryForTemplateLoading(new File("src/main/resources"));

@@ -9,6 +9,15 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  
+ <!--  监听定时任务：在接收到请求时处理 -->
+    <listener>
+    	<listener-class>cn.et.model.SlContextListence</listener-class>
+  </listener>
+  
+  
+  
   <servlet>
     <servlet-name>freemarker</servlet-name>
     <servlet-class>freemarker.ext.servlet.FreemarkerServlet</servlet-class>
